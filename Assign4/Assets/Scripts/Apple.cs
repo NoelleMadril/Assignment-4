@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-
+    main main;
     Transform tr; 
 
     void Start()
     {
         tr = GetComponent<Transform>();
+        main = GameObject.Find("scripts").GetComponent<main>();
     }
 
     
@@ -26,6 +27,7 @@ public class Apple : MonoBehaviour
         if(collision.gameObject.name == "basket")
         {
             Destroy(this.gameObject);
+            main.ScoreAdd();
         }
     }
 }

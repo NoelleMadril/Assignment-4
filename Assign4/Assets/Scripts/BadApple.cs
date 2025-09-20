@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class BadApple : MonoBehaviour
 {
+    main main;
     Transform tr;
 
 
     void Start()
     {
         tr = GetComponent<Transform>();
+        main = GameObject.Find("scripts").GetComponent<main>();
     }
 
     
@@ -26,6 +28,7 @@ public class BadApple : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
+            main.GameOver = true;
         }
 
     }

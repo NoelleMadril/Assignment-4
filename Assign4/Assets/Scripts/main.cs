@@ -11,6 +11,7 @@ public class main : MonoBehaviour
     public bool GameOver;
     public Transform title;
     public Text scoreboard;
+    
 
 
     void Start()
@@ -18,6 +19,8 @@ public class main : MonoBehaviour
         score = 0;
         GameOver = false;
         scoreboard.text = "0";
+
+        
     }
 
     
